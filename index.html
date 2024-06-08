@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <pre style="font-size: large;">
+      INPUT THAT I USED :--
+
+    < h1 class="a" id="ok">HELLO</ h1>
+    < h2 class="a" id="ok">HOW</ h2>
+    < h3 class="a" id="ok">ARE</ h3>
+    < h1 class="a" id="ok">YOU</ h1>
+    < h1 class="a" id="ok">OK</ h1>
+    < h6 class="a" id="ok">FINE< /h6>
+    < p class="a" id="ok">HII</ p>
+    < div class="a " id="ok">HELLO< /div>
+    < p class="a" id="ok">YES</ p>
+    < h1 class="a" id="ok">NO</ h1>
+    < p class="a" id="ok">OK</ p>
+    < h1 class="a" id="ok">BYE</ h1>
+
+   1. Create a web page with < h1> tags, 
+   fill the content, retrieve the content using DOM, 
+   and concatenate it. 
+   
+   -----------code----------
+
+   var z=[];
+    var b= document.getElementsByTagName("h1")
+    for(i=0;i< b.length;i++){
+      z=z+" "+ b[i].innerText;
+    }
+    console.log(z);
+
+    output:-  HELLO YOU OK NO BYE
+
+
+    2. Create a web page with < p> tags, fill the content,
+    retrieve the content using DOM, and concatenate it.
+     
+    -----------code----------
+
+    var x=[];
+    var y=document.getElementsByTagName("p");
+    for(j=0;j< y.length;j++){
+      x=x+" "+y[j].innerText;
+    }
+    console.log(x);
+     
+    output:-   HII YES OK
+
+     
+    3. Create a web page with different tags,give them  same class name,
+    retrieve the content, and concatenate it.
+    
+    -----------code----------
+
+    var j="";
+      var k=document.getElementsByClassName("a");
+      for(i=0;i< k.length;i++){
+        j=j+" "+k[i].textContent;
+      }
+      console.log(j);
+
+      output:-   HELLO HOW ARE YOU OK FINE HII HELLO YES NO OK BYE
+
+    
+    4. Create a web page with different tags, give them the same id name, 
+    retrieve the content, and concatenate it.
+
+    -----------code----------
+
+    var f=[];
+      var g=document.querySelectorAll("#ok");
+      for(l=0;l< g.length;l++){
+        f=f+" "+g[l].textContent;
+      }
+      console.log(f);
+      output:-   HELLO HOW ARE YOU OK FINE HII HELLO YES NO OK BYE
+
+
+    5. Take numbers 1 to 10, display even numbers in one color, and
+       display odd numbers in another color.
+      
+       -----------code----------
+
+       let num = [1,2,3,4,5,6,7,8,9,];
+      let even="";
+      let odd="";
+      let h2=document.createElement("h2")
+      let h3=document.createElement("h2")
+      for (var i = 1 ; i < 11 ; i ++ ) {
+        if(i%2==0){
+        even=even+" "+ i
+        } 
+        else{
+          odd=odd+" "+i
+        }
+        }
+        h2.append(even);
+        h2.style.color="red";
+        h3.style.color="blue"
+        h3.append(odd);
+        document.body.append(h3)
+        document.body.append(h2)
+
+
+
+
+
+
+  </pre>
+
+
+    <!-- <h1 class="a" id="ok">HELLO</h1>
+    <h2 class="a" id="ok">HOW</h2>
+    <h3 class="a" id="ok">ARE</h3>
+    <h1 class="a" id="ok">YOU</h1>
+    <h1 class="a" id="ok">OK</h1>
+    <h6 class="a" id="ok">FINE</h6>
+    <p class="a" id="ok">HII</p>
+    <div class="a " id="ok">HELLO</div>
+    <p class="a" id="ok">YES</p>
+    <h1 class="a" id="ok">NO</h1>
+    <p class="a" id="ok">OK</p>
+    <h1 class="a" id="ok">BYE</h1> -->
+    <script>
+      // var z=[];
+      // var b= document.getElementsByTagName("h1")
+      // for(i=0;i<b.length;i++){
+      //   z=z+" "+ b[i].innerText;
+      // }
+      // console.log(z);
+      
+      // var x=[];
+      // var y=document.getElementsByTagName("p");
+      // for(j=0;j<y.length;j++){
+      //   x=x+" "+y[j].innerText;
+      // }
+      // console.log(x);
+
+
+      // var j="";
+      // var k=document.getElementsByClassName("a");
+      // for(i=0;i<k.length;i++){
+      //   j=j+" "+k[i].textContent;
+      // }
+      // console.log(j);
+
+      // var f=[];
+      // var g=document.querySelectorAll("#ok");
+      // for(l=0;l<g.length;l++){
+      //   f=f+" "+g[l].textContent;
+      // }
+      // console.log(f);
+
+      let num = [1,2,3,4,5,6,7,8,9,];
+      let even="";
+      let odd="";
+      let h2=document.createElement("h2")
+      let h3=document.createElement("h2")
+      for (var i = 1 ; i < 11 ; i ++ ) {
+        if(i%2==0){
+        even=even+" "+ i
+        } 
+        else{
+          odd=odd+" "+i
+        }
+        }
+        h2.append(even);
+        h2.style.color="red";
+        h3.style.color="blue"
+        h3.append(odd);
+        document.body.append(h3)
+        document.body.append(h2)
+     
+    </script>
+</body>
+</html>
